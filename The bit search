@@ -1,0 +1,26 @@
+Write a method that takes an integer n and returns the index of the first '1' bit (starting from index 0 on the right).
+Example:If n = 4 (Binary: 100), 
+the first '1' is at index 2.
+If n = 10 (Binary: 1010), 
+the first '1' is at index 1.
+If n = 7 (Binary: 0111), 
+the first '1' is at index 0.
+
+import java.util.*;
+public class main {
+    public static void main(String[]args){
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int index=0;
+    int num;
+    while(n>0){
+        num=n&1;
+        if(num==1){
+                System.out.println(index);     
+                break;   
+        }
+        index++;
+        n>>=1;
+    }
+}
+}
